@@ -23,8 +23,7 @@ generator = Generator()
 
 definitions = [ "common",
                 "ping1d",
-                "ping360",
-                "sidescan"]
+                "ping360"]
 
 for definition in definitions:
     definitionFile = "%s/%s.json" % (definitionPath, definition)
