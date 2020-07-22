@@ -407,6 +407,147 @@
                         "description": "An array of return strength measurements taken at regular intervals across the scan region."
                     }
                 ]
+            },
+                        "profile": {
+                "id": "1308",
+                "description": "A profile produced from a single acoustic measurement. The data returned is an array of response strength at even intervals across the scan region. The scan region is defined as the region between <scan_start> and <scan_start + scan_length> millimeters away from the transducer. A distance measurement to the target is also provided.",
+                "payload": [
+                    {
+                        "name": "ping_number",
+                        "type": "u32",
+                        "description": ""
+                    },
+                    {
+                        "name": "scan_start",
+                        "type": "u32",
+                        "description": "",
+                        "units": "mm"
+                    },
+                    {
+                        "name": "scan_length",
+                        "type": "u32",
+                        "description": "",
+                        "units": "mm"
+                    },
+                    {
+                        "name": "start_ping_hz",
+                        "type": "u32",
+                        "description": "",
+                        "units": "hz"
+                    },
+                    {
+                        "name": "end_ping_hz",
+                        "type": "u32",
+                        "description": "",
+                        "units": "hz"
+                    },
+                    {
+                        "name": "adc_sample_hz",
+                        "type": "u32",
+                        "description": "",
+                        "units": "hz"
+                    },
+                    {
+                        "name": "timestamp",
+                        "type": "u32",
+                        "description": "",
+                        "units": "ms"
+                    },
+                    {
+                        "name": "spare",
+                        "type": "u32",
+                        "description": ""
+                    },
+                    {
+                        "name": "ping_duration_sec",
+                        "type": "float",
+                        "description": ""
+                    },
+                    {
+                        "name": "analog_gain",
+                        "type": "float",
+                        "description": "",
+                        "units": "db"
+                    },
+                    {
+                        "name": "max_pwr",
+                        "type": "float",
+                        "description": "",
+                        "units": "db"
+                    },
+                    {
+                        "name": "min_pwr",
+                        "type": "float",
+                        "description": "",
+                        "units": "db"
+                    },
+                    {
+                        "name": "step_db",
+                        "type": "float",
+                        "description": "",
+                        "units": "db"
+                    },
+                     {
+                        "name": "fspare1",
+                        "type": "float",
+                        "description": ""
+                    },
+                    {
+                        "name": "fspare2",
+                        "type": "float",
+                        "description": ""
+                    },
+                    {
+                        "name": "is_db",
+                        "type": "u8",
+                        "description": ""
+                    },
+                    {
+                        "name": "gain_index",
+                        "type": "u8",
+                        "description": ""
+                    },
+                    {
+                        "name": "decimation",
+                        "type": "u8",
+                        "description": ""
+                    },
+                    {
+                        "name": "reserved",
+                        "type": "u8",
+                        "description": ""
+                    },
+                    {
+                        "name": "num_results",
+                        "type": "u16",
+                        "description": ""
+                    },
+                    {
+                        "name": "scaled_db_pwr_results",
+                        "type": "vector",
+                        "vector": {
+                            "sizetype": "u16",
+                            "datatype": "u16",
+                            "size": "dynamic"
+                        },
+                        "description": "An array of return strength measurements taken at regular intervals across the scan region."
+                    }
+                ]
+            },
+            "nmea_wrapper": {
+                "id": "9",
+                "description": "Wrapper for a NMEA0183 Sentence",
+                "payload": [
+                    {
+                        "name": "nmea_sentence",
+                        "type": "vector",
+                        "vector": {
+                            "datatype": "char",
+                            "size": "dynamic"
+                        },
+                        "description": "ASCII text message. (not necessarily NULL terminated)"
+                    }
+                ]
             }
         },
         "control": {
